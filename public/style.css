@@ -1,0 +1,128 @@
+/* Styling Umum */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f1f5f9;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Pembungkus Login (Grid 2 Kolom: Kiri Gambar, Kanan Form) */
+.login-wrapper {
+  display: flex;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  width: 800px;
+  max-width: 95%;
+}
+
+/* Sisi Kiri: Banner / Gambar Resmi */
+.login-banner {
+  flex: 1;
+  background: linear-gradient(135deg, rgba(30, 60, 114, 0.9), rgba(42, 82, 152, 0.9)), 
+              url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.banner-content h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.banner-content p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e2e8f0;
+}
+
+/* Sisi Kanan: Kotak Form Login */
+.container {
+  flex: 1;
+  padding: 40px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Styling Dashboard (Sesudah Login) */
+.container-dashboard {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 450px;
+  max-width: 90%;
+}
+
+h2, h3 {
+  color: #1e293b;
+  margin-top: 0;
+}
+
+/* Styling Input & Tombol */
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 16px 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 14px;
+  background-color: #f8fafc;
+}
+
+input:focus, select:focus {
+  border-color: #2a5298;
+  outline: none;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.15);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #1e3c72;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #162c54;
+}
+
+/* Styling Rekap Absen */
+ul {
+  padding-left: 15px;
+  max-height: 160px;
+  overflow-y: auto;
+  border: 1px solid #e2e8f0;
+  padding: 10px;
+  border-radius: 6px;
+  background: #f8fafc;
+}
+
+li {
+  font-size: 13px;
+  color: #334155;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #edf2f7;
+  padding-bottom: 4px;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplikasi Absensi Berbasis Role</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Halaman Login -->
+  <div id="loginPage" class="login-wrapper">
+    <!-- Bagian Samping (Gambar / Ilustrasi Formal) -->
+    <div class="login-banner">
+      <div class="banner-content">
+        <h2>Sistem Informasi Absensi</h2>
+        <p>Silakan masuk menggunakan akun resmi untuk mengakses sistem pencatatan kehadiran.</p>
+      </div>
+    </div>
+
+    <!-- Bagian Form Login -->
+    <div class="container">
+      <h2>Login Absensi</h2>
+      <form id="loginForm">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Login / Masuk</button>
+      </form>
+      <p id="loginMessage" style="color: red; text-align: center; margin-top: 10px;"></p>
+    </div>
+  </div>
+
+  <!-- Halaman Dashboard -->
+  <div id="dashboardPage" class="container-dashboard" style="display: none;">
+    <h2 id="welcomeTitle">Dashboard Absensi</h2>
+    
+    <!-- Form Absen (Bisa diisi semua user) -->
+    <div id="formSection">
+      <h3>Form Kehadiran</h3>
+      <form id="attendanceForm">
+        <input type="text" id="namaUser" placeholder="Masukkan Nama Lengkap Lu..." required>
+        <select id="statusAbsen">
+          <option value="Hadir">Hadir</option>
+          <option value="Izin">Izin</option>
+          <option value="Sakit">Sakit</option>
+        </select>
+        <button type="submit">Kirim Absen</button>
+      </form>
+      <p id="absenMessage" style="color: green; margin-top: 10px; text-align: center;"></p>
+    </div>
+
+    <!-- Bagian Rekap Absen (Hanya tampil untuk Admin & Super Admin) -->
+    <div id="rekapSection" style="display: none; margin-top: 30px;">
+      <h3>Daftar Rekap Absensi</h3>
+      <ul id="attendanceList"></ul>
+    </div>
+    
+    <button id="logoutBtn" style="margin-top: 25px; background: #ff4d4d;">Logout</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
